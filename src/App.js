@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 const assistantCanvas = window.assistantCanvas;
 
 function App() {
+  const [text, setText] = useState('');
+  assistantCanvas.ready({
+    onUpdate(state) {
+      if ('text' in state) {
+        setText(state.text);
+      }
+    }
+  });
   return (
     <div className="App">
       <header className="App-header">
@@ -16,10 +24,11 @@ function App() {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => assistantCanvas.sendTextQuery('さようなら')}
+          onClick={() => assistantCanvas.sendTextQuery('speech')}
         >
-          exit
+          push
         </a>
+        <h1>{text}</h1>
       </header>
     </div>
   );
