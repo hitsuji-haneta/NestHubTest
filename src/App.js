@@ -16,9 +16,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>{text}</h1>
         <a
           className="App-link"
           href="#"
@@ -28,7 +26,6 @@ function App() {
         >
           push
         </a>
-        <h1>{text}</h1>
       </header>
     </div>
   );
