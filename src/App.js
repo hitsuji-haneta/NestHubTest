@@ -6,9 +6,9 @@ const interactiveCanvas = window.interactiveCanvas;
 function App() {
   const [text, setText] = useState('');
   interactiveCanvas.ready({
-    onUpdate(state) {
-      if ('text' in state) {
-        setText(state.text);
+    onUpdate(data) {
+      if ('text' in data) {
+        setText(data.text);
       }
     }
   });
