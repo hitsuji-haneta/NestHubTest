@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-const assistantCanvas = window.assistantCanvas;
+const interactiveCanvas = window.interactiveCanvas;
 
 function App() {
   const [text, setText] = useState('');
-  assistantCanvas.ready({
+  interactiveCanvas.ready({
     onUpdate(state) {
       if ('text' in state) {
         setText(state.text);
