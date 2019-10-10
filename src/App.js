@@ -22,7 +22,7 @@ function App() {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => assistantCanvas.sendTextQuery('speech')}
+          onClick={() => interactiveCanvas.sendTextQuery('スタート')}
         >
           push
         </a>
